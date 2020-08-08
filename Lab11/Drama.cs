@@ -2,9 +2,12 @@
 
 namespace Lab11
 {
-    public class Drama : Movies
+    public class Drama : IMovies
     {
-        public new void VroomVroom()
+        public string Title { get; set; }
+        public string Category { get; set; }
+
+        public void VroomVroom()
         {
             Console.WriteLine("Relationships");
             Console.WriteLine("FailedHopes");
@@ -16,7 +19,6 @@ namespace Lab11
             Console.WriteLine("Coffin");
             Console.WriteLine("Chase");
             Console.WriteLine("Parade");
-            return;
         }
     }
 }

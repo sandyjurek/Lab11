@@ -1,52 +1,76 @@
 ﻿using System;
 
-
 namespace Lab11
 {
     class Program
     {
         static void Main(string[] args)
         {
-            UserInputForMovies();
-        }
+            bool ansYes = true;
 
-        public static void UserInputForMovies()
-        {
             Console.WriteLine("Welcome to the Movie List Application!");
             Console.WriteLine("There are 100 movies in this list.");
-            Console.WriteLine("What category are you interested in? (pick: animated, drama, horror, or scifi: )");
+            Console.WriteLine();
 
-            var userInput = Console.ReadLine();
-
-            var isMovieList = Enum.TryParse(userInput, out MovieCategory movieCategory);
-
-            if (isMovieList)
+            do
             {
-                Movies movies;
+                Console.WriteLine("What category are you interested in? (pick: animated, drama, horror, or scifi: )");
 
-                switch (movieCategory)
+                var userInput = Console.ReadLine();
+
+                var isMovieList = Enum.TryParse(userInput, out MovieCategory movieCategory);
+
+                if (isMovieList)
                 {
-                    case MovieCategory.Animated:
-                        movies = new Animated();
-                        movies.VroomVroom();
-                        break;
+                    IMovies movies;
 
-                    case MovieCategory.Drama:
-                        movies = new Drama();
-                        movies.VroomVroom();
-                        break;
+                    switch (movieCategory)
+                    {
+                        case MovieCategory.Animated:
+                            movies = new Animated();
+                            movies.VroomVroom();
+                            break;
 
-                    case MovieCategory.SciFi:
-                        movies = new SciFi();
-                        movies.VroomVroom();
-                        break;
+                        case MovieCategory.Drama:
+                            movies = new Drama();
+                            movies.VroomVroom();
+                            break;
 
-                    case MovieCategory.Horror:
-                        movies = new Horror();
-                        movies.VroomVroom();
-                        break;
+                        case MovieCategory.SciFi:
+                            movies = new SciFi();
+                            movies.VroomVroom();
+                            break;
+
+                        case MovieCategory.Horror:
+                            movies = new Horror();
+                            movies.VroomVroom();
+                            break;
+                        default:
+                            break;
+                    }
                 }
-            }
+
+                else if (!isMovieList)
+                {
+                    Console.WriteLine("You entered incorrrect data.");
+                }
+
+                Console.WriteLine("Would you like to continue? (y/n): ");
+                string continueAnswer = Console.ReadLine();
+                char.TryParse(continueAnswer, out char contAnswer);
+
+                if (contAnswer == 'y' || contAnswer == 'Y')
+                {
+                    ansYes = true;
+                }
+                else
+                {
+                    ansYes = false;
+                }
+            } 
+            
+            while (ansYes == true);
+            Console.WriteLine("Thanks bye!");
         }
     }
 }

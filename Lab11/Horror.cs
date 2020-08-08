@@ -2,9 +2,13 @@
 
 namespace Lab11
 {
-    public class Horror : Movies
+    public class Horror : IMovies
     {
-        public new void VroomVroom()
+
+        public string Title { get; set; }
+        public string Category { get; set; }
+
+        public void VroomVroom()
         {
             Console.WriteLine("Nightmare");
             Console.WriteLine("Halloween");
@@ -16,7 +20,6 @@ namespace Lab11
             Console.WriteLine("Scary");
             Console.WriteLine("Boring");
             Console.WriteLine("Zombies");
-            return;
         }
     }
 }

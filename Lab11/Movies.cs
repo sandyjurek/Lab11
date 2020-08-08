@@ -1,27 +1,13 @@
-﻿namespace Lab11
+﻿using System;
+
+namespace Lab11
 {
-    public class Movies
+    public interface IMovies
 
     {
-        private string _title;
-        private string _category;
+        public string Title { get; set; }
+        public string Category { get; set; }
 
-        public string Title
-        {
-            get { return _title; }
-            set { _title = value; }
-        }
-
-        public string Category
-        {
-            get { return _category; }
-
-            set { _category = value; }
-        }
-
-        public void VroomVroom()
-        {
-            return;
-        }
+        public void VroomVroom();
     }
 }

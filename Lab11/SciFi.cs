@@ -2,21 +2,23 @@
 
 namespace Lab11
 {
-    public class SciFi : Movies
+    public class SciFi : IMovies
     {
-        public new void VroomVroom()
+        public string Title { get; set; }
+        public string Category { get; set; }
+
+        public void VroomVroom()
         {
             Console.WriteLine("Spaceballs");
-            Console.WriteLine("Mooshot");
-            Console.WriteLine("Apollo13");
-            Console.WriteLine("EarthBound");
-            Console.WriteLine("SpaceBound");
-            Console.WriteLine(" MarsBound");
-            Console.WriteLine("JupiterBound");
-            Console.WriteLine("JumpingJupiters");
-            Console.WriteLine("FlyingtoVenus");
-            Console.WriteLine("Plutonship");
-            return;
+            Console.WriteLine("Source Code");
+            Console.WriteLine("Apollo 13");
+            Console.WriteLine("Transformers");
+            Console.WriteLine("Guardians of the Galaxy");
+            Console.WriteLine("2001 Space Odyssey");
+            Console.WriteLine("Star Wars");
+            Console.WriteLine("Star Trek");
+            Console.WriteLine("Battlestar Gallactica");
+            Console.WriteLine("Edge of Tomorrow");
         }
     }
 }
