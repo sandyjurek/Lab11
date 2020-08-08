@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.WebSockets;
-using System.Runtime.CompilerServices;
-using System.Text;
-
-namespace Lab11
+﻿namespace Lab11
 {
     public class Movies
+
     {
         private string _title;
         private string _category;
@@ -24,11 +19,9 @@ namespace Lab11
             set { _category = value; }
         }
 
-        public string Movies(string title, string category)
+        public void VroomVroom()
         {
-            Title = title;
-            Category = category;
+            return;
         }
-
     }
 }

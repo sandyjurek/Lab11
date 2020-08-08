@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Lab11
 {
     class Program
@@ -10,7 +11,6 @@ namespace Lab11
         }
 
         public static void UserInputForMovies()
-
         {
             Console.WriteLine("Welcome to the Movie List Application!");
             Console.WriteLine("There are 100 movies in this list.");
@@ -18,21 +18,34 @@ namespace Lab11
 
             var userInput = Console.ReadLine();
 
-            var isMovieList = new Movies(Movies.Equals enum MoviesByCategory);
-        }
+            var isMovieList = Enum.TryParse(userInput, out MovieCategory movieCategory);
 
             if (isMovieList)
-
             {
-                Movies MovieList;
+                Movies movies;
 
-                switch (isMovieList)
-
+                switch (movieCategory)
                 {
-                    case Movies
+                    case MovieCategory.Animated:
+                        movies = new Animated();
+                        movies.VroomVroom();
+                        break;
+
+                    case MovieCategory.Drama:
+                        movies = new Drama();
+                        movies.VroomVroom();
+                        break;
+
+                    case MovieCategory.SciFi:
+                        movies = new SciFi();
+                        movies.VroomVroom();
+                        break;
+
+                    case MovieCategory.Horror:
+                        movies = new Horror();
+                        movies.VroomVroom();
+                        break;
                 }
-
-
             }
         }
     }

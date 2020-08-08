@@ -4,25 +4,11 @@ using System.Text;
 
 namespace Lab11
 {
-    public enum Animated
+    public enum MovieCategory
     {
-        Mulan, Mickey, Frozen, Spirited, Chucky, Ducky, Mucky, Snow, Cinderalla,
+        Animated,
+        Drama,
+        SciFi,
+        Horror,
     }
-
-    public enum Drama
-    {
-        Relationships, FailedHopes, Mystery, Detective, Crime, Lifetime, Funeral, Coffin, Chase, Parade,
-    }
-
-    public enum Horror
-    {
-        Nightmare, Halloween, Freddy, Devil, Witch, Scarefest, Murder, Scary, Boring, Zombies,
-    }
-
-    public enum SciFi
-    {
-        Spaceballs, Moonshot, Apollo13, EarthBound, SpaceBound, MarsBound, JupiterJumps, VenusFlying, Plutoship, Saturn,
-    }
-
 }
-
