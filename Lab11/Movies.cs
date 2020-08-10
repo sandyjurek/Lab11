@@ -8,6 +8,6 @@ namespace Lab11
         public string Title { get; set; }
         public string Category { get; set; }
 
-        public void VroomVroom();
+        public void MyMovieList();
     }
 }

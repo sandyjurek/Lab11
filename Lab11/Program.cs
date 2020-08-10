@@ -28,22 +28,22 @@ namespace Lab11
                     {
                         case MovieCategory.Animated:
                             movies = new Animated();
-                            movies.VroomVroom();
+                            movies.MyMovieList();
                             break;
 
                         case MovieCategory.Drama:
                             movies = new Drama();
-                            movies.VroomVroom();
+                            movies.MyMovieList();
                             break;
 
                         case MovieCategory.SciFi:
                             movies = new SciFi();
-                            movies.VroomVroom();
+                            movies.MyMovieList();
                             break;
 
                         case MovieCategory.Horror:
                             movies = new Horror();
-                            movies.VroomVroom();
+                            movies.MyMovieList();
                             break;
                         default:
                             break;
