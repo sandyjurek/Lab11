@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Lab11
 {
@@ -10,16 +11,16 @@ namespace Lab11
 
         public void MyMovieList()
         {
-            Console.WriteLine("Nightmare");
+            Console.WriteLine("Nightmare on Elm Street");
             Console.WriteLine("Halloween");
-            Console.WriteLine("Freddy");
-            Console.WriteLine("Devil");
-            Console.WriteLine("Witch");
-            Console.WriteLine("Scarefest");
-            Console.WriteLine("Murder");
-            Console.WriteLine("Scary");
-            Console.WriteLine("Boring");
-            Console.WriteLine("Zombies");
+            Console.WriteLine("Nightmare Before Christmas");
+            Console.WriteLine("Devil in a Blue Dress");
+            Console.WriteLine("Witchfest");
+            Console.WriteLine("Scary Movie");
+            Console.WriteLine("Ammityville Horror");
+            Console.WriteLine("Friday the 13th");
+            Console.WriteLine("Aliens are Attacking");
+            Console.WriteLine("Zombies are Coming!");
         }
     }
 }

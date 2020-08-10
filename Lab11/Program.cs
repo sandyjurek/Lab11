@@ -14,7 +14,7 @@ namespace Lab11
 
             do
             {
-                Console.WriteLine("What category are you interested in? (pick: animated, drama, horror, or scifi: )");
+                Console.WriteLine("What category are you interested in? (Animated, Drama, Horror, or SciFi):"); 
 
                 var userInput = Console.ReadLine();
 

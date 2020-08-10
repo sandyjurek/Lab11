@@ -13,11 +13,11 @@ namespace Lab11
             Console.WriteLine("Mulan");
             Console.WriteLine("Up");
             Console.WriteLine("Mickey's Christmas");
-            Console.WriteLine("Spirited");
-            Console.WriteLine("Ducky");
-            Console.WriteLine("Wucky");
-            Console.WriteLine("Mucky");
-            Console.WriteLine("SnowWhite");
+            Console.WriteLine("Spirited Away");
+            Console.WriteLine("Bambi");
+            Console.WriteLine("Rio");
+            Console.WriteLine("Madagascar");
+            Console.WriteLine("Snow White");
             Console.WriteLine("Cinderella");
         }
     }
