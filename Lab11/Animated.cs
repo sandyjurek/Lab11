@@ -5,7 +5,7 @@ namespace Lab11
     public class Animated : IMovies
     {
         public string Title { get; set; }
-        public string Category { get; set; }
+        public MovieCategory Category { get; set; }
 
         public void MyMovieList()
         {

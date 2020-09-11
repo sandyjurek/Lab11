@@ -3,74 +3,95 @@
 namespace Lab11
 {
     class Program
-    {
+    {//adding comment
         static void Main(string[] args)
         {
             bool ansYes = true;
-
             Console.WriteLine("Welcome to the Movie List Application!");
             Console.WriteLine("There are 100 movies in this list.");
             Console.WriteLine();
 
             do
             {
-                Console.WriteLine("What category are you interested in? (Animated, Drama, Horror, or SciFi):"); 
-
+                Console.WriteLine("What category are you interested in? (Animated, Drama, Horror, or SciFi):");
                 var userInput = Console.ReadLine();
 
-                var isMovieList = Enum.TryParse(userInput, out MovieCategory movieCategory);
+                Movie movie = new Movie();
+                string input = Console.ReadLine().ToLower().Trim();
 
-                if (isMovieList)
+
+
+                foreach (var mov in movie.Movies)
                 {
-                    IMovies movies;
 
-                    switch (movieCategory)
+
+                    if (input == mov.Category.ToString().ToLower())
                     {
-                        case MovieCategory.Animated:
-                            movies = new Animated();
-                            movies.MyMovieList();
-                            break;
+                        Console.WriteLine(mov.Title);
+                        Console.WriteLine(mov.Category);
+                    }
 
-                        case MovieCategory.Drama:
-                            movies = new Drama();
-                            movies.MyMovieList();
-                            break;
-
-                        case MovieCategory.SciFi:
-                            movies = new SciFi();
-                            movies.MyMovieList();
-                            break;
-
-                        case MovieCategory.Horror:
-                            movies = new Horror();
-                            movies.MyMovieList();
-                            break;
-                        default:
-                            break;
+                    else
+                    {
+                        Console.WriteLine("You entered incorrrect data.");
                     }
                 }
 
-                else if (!isMovieList)
-                {
-                    Console.WriteLine("You entered incorrrect data.");
-                }
 
                 Console.WriteLine("Would you like to continue? (y/n): ");
+                Console.WriteLine("_______________________");
                 string continueAnswer = Console.ReadLine();
                 char.TryParse(continueAnswer, out char contAnswer);
 
-                if (contAnswer == 'y' || contAnswer == 'Y')
+                if (contAnswer)
                 {
-                    ansYes = true;
+
                 }
-                else
-                {
-                    ansYes = false;
-                }
-            } 
+
+                    while (contAnswer())
+
+                    {
+                         Console.WriteLine("bye");
+                    }
+                
+                   
+                    else
+                    {
+                        ansYes == false;
+                    }
+
             
-            while (ansYes == true);
-            Console.WriteLine("Thanks bye!");
-        }
-    }
-}
+            
+    
+
+        //var isMovieList = Enum.TryParse(userInput, out MovieCategory movieCategory);
+
+        //if (isMovieList)
+        //{
+        //    IMovies movies;
+
+        //    switch (movieCategory)
+        //    {
+        //        case MovieCategory.Animated:
+        //            movies = new Animated();
+        //            movies.MyMovieList();
+        //             break;
+
+        //         case MovieCategory.Drama:
+        //             movies = new Drama();
+        //             movies.MyMovieList();
+        //            break;
+
+        //         case MovieCategory.SciFi:
+        //            movies = new SciFi();
+        //             movies.MyMovieList();
+        //             break;
+
+        //         case MovieCategory.Horror:
+        //             movies = new Horror();
+        //             movies.MyMovieList();
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        // }
